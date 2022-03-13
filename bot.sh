@@ -20,7 +20,7 @@ pattern=$(cat <<-END
 END
 )
 
-function botie(){
+function progress_bar(){
 
 echo -ne '█████                     [33%]\r'
 sleep 1
@@ -29,21 +29,29 @@ sleep 1
 echo -ne '█████████████████████ [100%]\r'
 echo -ne '\n'
 
+}
+
+
+function botie(){
+
+#uncomment below for installing the packages
 #npm install discord.js --save
 #npm install dotenv
 #npm install --save discord-youtube-api
-(cd /home/$(whoami)/bot; node bot.js)
+(cd /home/$(whoami)/bot && gnome-terminal -- node bot.js)
 
 }
 
+
 echo "${red_color}${pattern}"
-
-
 echo "Write 'start' to starting botie <3 ${reset_color}"
 
 read answer
 
+
 if [ $answer ] ; then
+	progress_bar
+	sleep 2
 	botie
 fi
 
