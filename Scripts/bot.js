@@ -16,7 +16,7 @@ function botie() {
             });
         console.log(`Logged in as ${client.user.tag}!`);
         console.log(guild.memberCount);
-
+ 
     });
 
     client.on("messageCreate", msg => {

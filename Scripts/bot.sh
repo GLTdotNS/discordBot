@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 #console colors
 red_color=`tput setaf 1`
 violet=`tput setaf 125`
